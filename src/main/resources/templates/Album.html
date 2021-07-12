@@ -7,6 +7,7 @@
 <body>
         <span th:each="album:${album}">
             <img th:src="${album.imageUrl}">
+             <p th:text="${album.id}"></p>
             <p th:text="${album.title}"></p>
             <p th:text="${album.artist}"></p>
             <p th:text="${album.songCount}"></p>
