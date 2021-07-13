@@ -21,6 +21,9 @@ public class Album {
         this.imageUrl = imageUrl;
     }
 
+    public Album() {
+    }
+
     public String getTitle() {
         return title;
     }
