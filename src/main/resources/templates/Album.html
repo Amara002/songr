@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
     <div class="navbar" th:fragment="header">
 
@@ -29,6 +30,8 @@
 </header>
         <h2>The best Album</h2>
         <div th:each="album:${album}">
+
+        
             <img th:src="${album.imageUrl}">
             <p th:text="${album.title}"></p>
             <p th:text="${album.artist}"></p>
