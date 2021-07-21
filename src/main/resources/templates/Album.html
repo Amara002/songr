@@ -3,17 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <span th:each="album:${albums}">
-            <p>Album ID: <span th:text=${album.id}></spanth:text></span></p>
+
+<header>
+    <div class="navbar" th:fragment="header">
+
+        <ul class="nav navbar-nav">
+            <li>
+                <a class="navbar-brand" href="/">Home Page</a>
+            </li>
+            <li>
+                <a class="navbar-brand" href="/hello">Hello Page</a>
+            </li>
+            <li>
+                <a href="/capitalize/hello" >Capitalize</a>
+            </li>
+            <li>
+                <a href="/albums" >Albums</a>
+            </li>
+        </ul>
+
+
+    </div>
+</header>
+        <h2>The best Album</h2>
+        <div th:each="album:${album}">
+
+        
             <img th:src="${album.imageUrl}">
             <p th:text="${album.title}"></p>
             <p th:text="${album.artist}"></p>
             <p th:text="${album.songCount}"></p>
             <p th:text="${album.length}"></p>
 
-
-        </span>
+        </div>
 </body>
 </html>
