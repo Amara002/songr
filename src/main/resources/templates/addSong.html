@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="navbar" th:fragment="header">
+
+  <ul class="nav navbar-nav">
+    <li>
+      <a class="navbar-brand" href="/">Home Page</a>
+    </li>
+    <li>
+      <a class="navbar-brand" href="/hello">Hello Page</a>
+    </li>
+    <li>
+      <a href="/capitalize/hello" >Capitalize</a>
+    </li>
+    <li>
+      <a href="/albums" >Albums</a>
+    </li>
+    <li>
+      <a href="/addAlbum" >Add your Album</a>
+    </li>
+    <li>
+      <a href="/songs" >Your songs</a>
+    </li>
+    <li>
+      <a href="/addSong" >Add Songs</a>
+    </li>
+  </ul>
+
+
+</div>
+<form action="/songs" method="post">
+  <br>
+  <br>
+  <label>Song Title</label>
+  <input type="text" name="title" />
+  <br>
+  <br>
+  <label>Track Number</label>
+  <input type="number" name="trackNumber" />
+  <br>
+  <br>
+  <label>Length</label>
+  <input type="number" name="length" />
+  <br>
+  <br>
+  <label>Album</label>
+  <input type="number" name="albumID" />
+  <br>
+  <br>
+  <input type="submit" value="Add Song!">
+  <br>
+  <br>
+</form>
+</body>
+</html>

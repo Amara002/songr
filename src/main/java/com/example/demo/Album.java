@@ -1,6 +1,8 @@
 package com.example.demo;
 
 import javax.persistence.*;
+import java.util.List;
+
 @Entity
 
 public class Album {
@@ -20,9 +22,16 @@ public class Album {
         this.length = length;
         this.imageUrl = imageUrl;
     }
+    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL)
+    private List<Song> songs;
+
+    public List<Song> getSongs() {
+        return songs;
+    }
 
     public Album() {
     }
+
 
     public String getTitle() {
         return title;

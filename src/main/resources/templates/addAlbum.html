@@ -5,6 +5,34 @@
     <title>Title</title>
 </head>
 <body>
+<div class="navbar" th:fragment="header">
+
+    <ul class="nav navbar-nav">
+        <li>
+            <a class="navbar-brand" href="/">Home Page</a>
+        </li>
+        <li>
+            <a class="navbar-brand" href="/hello">Hello Page</a>
+        </li>
+        <li>
+            <a href="/capitalize/hello" >Capitalize</a>
+        </li>
+        <li>
+            <a href="/albums" >Albums</a>
+        </li>
+        <li>
+            <a href="/addAlbum" >Add your Album</a>
+        </li>
+        <li>
+            <a href="/songs" >Your songs</a>
+        </li>
+        <li>
+            <a href="/addSong" >Add Songs</a>
+        </li>
+    </ul>
+
+
+</div>
 <form action="/albums" method="post">
     <label>Title</label>
     <input type="text" name="title" />

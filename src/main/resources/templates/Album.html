@@ -5,7 +5,35 @@
     <title>Title</title>
 </head>
 <body>
-        <span th:each="album:${albums}">
+<div class="navbar" th:fragment="header">
+
+    <ul class="nav navbar-nav">
+        <li>
+            <a class="navbar-brand" href="/">Home Page</a>
+        </li>
+        <li>
+            <a class="navbar-brand" href="/hello">Hello Page</a>
+        </li>
+        <li>
+            <a href="/capitalize/hello" >Capitalize</a>
+        </li>
+        <li>
+            <a href="/albums" >Albums</a>
+        </li>
+        <li>
+            <a href="/addAlbum" >Add your Album</a>
+        </li>
+        <li>
+            <a href="/songs" >Your songs</a>
+        </li>
+        <li>
+            <a href="/addSong" >Add Songs</a>
+        </li>
+    </ul>
+
+
+</div>
+<span th:each="album:${albums}">
             <p>Album ID: <span th:text=${album.id}></spanth:text></span></p>
             <img th:src="${album.imageUrl}">
             <p th:text="${album.title}"></p>
@@ -13,7 +41,9 @@
             <p th:text="${album.songCount}"></p>
             <p th:text="${album.length}"></p>
 
-
+<div th:each="song: ${album.songs}">
+    <p th:text="${song.title} + ': ' + ${song.length} + ' seconds'"></p>
+</div>
         </span>
 </body>
 </html>
